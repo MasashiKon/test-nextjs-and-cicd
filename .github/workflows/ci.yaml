@@ -11,5 +11,5 @@ jobs:
 
       - name: Install packages
         run: npm i
-      -name: Run Eslint
+      - name: Run Eslint
         run: npm run lint
