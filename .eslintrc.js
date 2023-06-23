@@ -11,9 +11,7 @@ module.exports = {
       env: {
         node: true,
       },
-      files: [
-        '.eslintrc.{js,cjs}',
-      ],
+      files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
         sourceType: 'script',
       },
@@ -23,5 +21,16 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   rules: {
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '**/*.test.ts?(x)',
+          '**/*.spec.ts?(x)',
+          '**/test-utils.ts',
+          'webpack.config.js',
+        ],
+      },
+    ],
   },
 };
