@@ -2,7 +2,7 @@ name: CI
 on: [push]
 jobs:
   standerd-checks: 
-    name: Lint and Test
+    name: change name
     runs-on: ubuntu-latest
 
     steps:
